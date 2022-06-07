@@ -13,5 +13,5 @@ output "kube_admin_config" {
 }
 
 output "outbound_ports_allocated" {
-  value = azurerm_kubernetes_cluster.cluster.network_profile.load_balancer_profile.outbound_ports_allocated
+  value = azurerm_kubernetes_cluster.cluster.network_profile[0].load_balancer_profile[0].outbound_ports_allocated
 }
