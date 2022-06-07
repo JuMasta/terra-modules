@@ -21,8 +21,10 @@ resource "azurerm_kubernetes_cluster" "cluster" {
     dns_service_ip     = "192.168.0.10"
     docker_bridge_cidr = "172.17.0.1/16"
     load_balancer_sku  = "standard"
+
     load_balancer_profile {
-      outbound_ip_address_ids = var.lb_ips
+      outbound_ip_address_ids  = var.lb_ips
+      outbound_ports_allocated = 2048
     }
 
   }
