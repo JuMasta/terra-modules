@@ -5,9 +5,7 @@ resource "azurerm_virtual_network" "aks" {
   location            = var.location
   address_space       = var.address_spaces
 
-  tags = {
-    environment = var.environment_name
-  }
+  tags = var.tags
 
 }
 

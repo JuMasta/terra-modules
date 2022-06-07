@@ -1,6 +1,4 @@
-variable "environment_name" {
-  default = "development"
-}
+variable "tags" {}
 
 
 
@@ -25,7 +23,7 @@ variable "address_spaces" {
 }
 
 variable "subnets" {
-    type = map(object({
+  type = map(object({
     address_prefixes = list(string)
   }))
 }
