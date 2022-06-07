@@ -58,3 +58,8 @@ variable "frequency" {
   type    = string
   default = "PT5M"
 }
+
+
+variable "severity" {
+  
+}

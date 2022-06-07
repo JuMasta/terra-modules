@@ -18,7 +18,7 @@ resource "azurerm_monitor_metric_alert" "loadBalancers_metrics" {
       values   = var.dimension_values
     }
   }
-
+  severity  = var.severity
   frequency = var.frequency
 
 }
