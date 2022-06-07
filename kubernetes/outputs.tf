@@ -13,8 +13,8 @@ output "kube_admin_config" {
 }
 
 
-output "default_node_pool_id" {
+# output "default_node_pool_id" {
 
-  value = azurerm_kubernetes_cluster.cluster.default_node_pool[0].id
+#   value = azurerm_kubernetes_cluster.cluster.default_node_pool[0].id
 
-}
+# }
