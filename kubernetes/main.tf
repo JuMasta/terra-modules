@@ -20,9 +20,9 @@ resource "azurerm_kubernetes_cluster" "cluster" {
     service_cidr       = "192.168.0.0/16"
     dns_service_ip     = "192.168.0.10"
     docker_bridge_cidr = "172.17.0.1/16"
-
+    load_balancer_sku  = "standard"
     load_balancer_profile {
-        outbound_ip_address_ids = var.lb_ips
+      outbound_ip_address_ids = var.lb_ips
     }
 
   }
@@ -30,7 +30,7 @@ resource "azurerm_kubernetes_cluster" "cluster" {
 
 
   default_node_pool {
-    name                  = "default"
+    name                  = "applications"
     vm_size               = var.vm_size
     node_count            = 1
     enable_auto_scaling   = false
@@ -47,3 +47,6 @@ resource "azurerm_kubernetes_cluster" "cluster" {
   tags = var.tags
 
 }
+
+
+
