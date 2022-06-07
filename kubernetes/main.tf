@@ -38,8 +38,6 @@ resource "azurerm_kubernetes_cluster" "cluster" {
     type = "SystemAssigned"
   }
 
-  tags = {
-    environment = var.environment_name
-  }
+  tags = var.tags
 
 }

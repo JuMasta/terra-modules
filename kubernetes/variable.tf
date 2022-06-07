@@ -1,6 +1,5 @@
-variable "environment_name" {
-  type = string
-  default = "development"
+variable "tags" {
+
 }
 
 variable "cluster_name" {
