@@ -2,6 +2,8 @@ variable "tags" {
 
 }
 
+variable "lb_ips" {}
+
 variable "cluster_name" {
   type = string
 }
